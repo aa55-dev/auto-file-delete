@@ -1,0 +1,9 @@
+[Unit]
+Description=Auto delete files
+
+
+[Service]
+ExecStart=afd %h
+
+[Install]
+WantedBy=multi-user.target
