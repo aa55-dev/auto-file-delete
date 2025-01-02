@@ -2,7 +2,7 @@
 Description=Auto delete files
 
 [Timer]
-OnCalendar=*:0/15
+OnCalendar=daily
 Persistent=true
 
 [Install]
