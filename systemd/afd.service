@@ -4,6 +4,8 @@ Description=Auto delete files
 
 [Service]
 ExecStart=afdd %h
+CPUWeight=1
+IOWeight=1
 
 [Install]
 WantedBy=multi-user.target
