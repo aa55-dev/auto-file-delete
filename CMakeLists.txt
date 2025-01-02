@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 
 project(auto-file-delete LANGUAGES CXX)
 
+option(BUILD_TESTING "Build tests" OFF)
 include(CTest)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -87,7 +88,9 @@ add_executable(afd afd_main.cpp afd.cpp afd.hpp common.cpp common.hpp)
 add_executable(afdq afdq_main.cpp afdq.cpp common.hpp common.cpp)
 add_executable(afdd afdd.cpp common.hpp common.cpp)
 
+if (BUILD_TESTING)
 add_subdirectory(tests)
+endif()
 
 include(GNUInstallDirs)
 install(
