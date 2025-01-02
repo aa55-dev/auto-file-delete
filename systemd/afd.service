@@ -3,7 +3,7 @@ Description=Auto delete files
 
 
 [Service]
-ExecStart=afd %h
+ExecStart=afdd %h
 
 [Install]
 WantedBy=multi-user.target
