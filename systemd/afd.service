@@ -6,6 +6,9 @@ Description=Auto delete files
 ExecStart=afdd %h
 CPUWeight=1
 IOWeight=1
+PrivateNetwork=true
+NoNewPrivileges=true
+ProtectSystem=strict
 
 [Install]
 WantedBy=multi-user.target
